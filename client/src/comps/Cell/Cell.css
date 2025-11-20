@@ -1,0 +1,15 @@
+.gridInactive {
+  width: 60px;
+  height: 60px;
+  background-color: lightgray; 
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gridActive {
+  width: 60px;
+  height: 60px;
+  background-color: orange; 
+  cursor: pointer;
+  border-radius: 5px;
+}
