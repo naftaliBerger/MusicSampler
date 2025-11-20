@@ -1,9 +1,9 @@
-import { Cell } from "../Cell/Cell.tsx"; 
-import "./Grid.css"
+import { Cell } from "../Cell/Cell.tsx";
+import "./Grid.css";
 
 export function Grid() {
-  const numRows = 5;
-  const numCols = 5;
+  const numRows = 7;
+  const numCols = 10;
 
   const cells = [];
 
@@ -14,7 +14,10 @@ export function Grid() {
   }
 
   return (
-    <div className="gridContainer">
+    <div
+      className="gridContainer"
+      style={{ gridTemplateColumns: `repeat(${numCols},60px)` }}
+    >
       {cells}
     </div>
   );
