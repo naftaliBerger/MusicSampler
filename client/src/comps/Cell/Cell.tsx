@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Cell.css";
+import { Context } from "../../Context/Provider";
 
-export function Cell({ row }: { row: number }) {
+export function Cell({ row ,col}:{ row: number; col: number }) {
   const [active, setActive] = useState(false);
+  const context = useContext(Context);
+  const { play} = context!;
 
   const handleClick = () => {
+    
+    play.current[row][col] = !play.current[row][col] 
+
     if (!active) {
       const audio = new Audio(`http://localhost:3005/A${row}.wav`);
       audio.play();
     }
     setActive((prev) => !prev);
-  };
+  }
+
+
   function BoxColor() {
   if (!active) return "gridInactive";
 
