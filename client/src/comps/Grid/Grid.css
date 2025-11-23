@@ -1,6 +1,11 @@
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(5, 60px); 
-  grid-template-rows: repeat(5, 60px);   
-  gap: 5px; 
+  gap: 5px;
+  justify-content: center;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  display: grid;
+  justify-content: center;
 }
