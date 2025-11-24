@@ -1,7 +1,0 @@
-button{
-  display: grid;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: rgb(194, 244, 244);
-}
