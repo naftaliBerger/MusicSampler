@@ -1,13 +1,14 @@
-import Footer from "./comps/Footer/Footer.tsx";
+import Bottons from "./comps/Bottons/Bottons.tsx";
 import { Grid } from "./comps/Grid/Grid.tsx";
 import {Provider} from "./Context/Provider.tsx"
+import "./App.css"
 const App: React.FC = () => {
   return (
-    <div>
+    <div id="base">
       <h1>🎹Music Sampler🎸</h1>
       <Provider>
         <Grid />
-        <Footer/>
+        <Bottons/>
       </Provider>
     </div>
   );

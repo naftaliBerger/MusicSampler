@@ -9,7 +9,7 @@ export function Cell({ row ,col}:{ row: number; col: number }) {
 
   const handleClick = () => {
     
-    play.current[row][col] = !play.current[row][col] 
+    play.current[col][row] = !play.current[col][row] 
 
     if (!active) {
       const audio = new Audio(`http://localhost:3005/A${row}.wav`);
