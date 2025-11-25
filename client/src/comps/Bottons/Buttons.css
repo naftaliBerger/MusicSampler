@@ -1,0 +1,79 @@
+button {
+  display: grid;
+  cursor: pointer;
+  border-radius: 5px;
+  /* border-color: #faebd7 */
+  border-color: #ffffff;
+}
+.Buttons {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(242 219 103);
+  margin-top: 80px
+}
+
+.baseButton{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+}
+.play {
+  background-image: url("/play.png");
+}
+.addColl{
+  background-image: url("/plus.png");
+}
+.DeleteColl{
+  background-image: url("/minus.png");
+}
+.Refresh{
+  background-image: url("/Refresh.png");
+}
+
+.speed {
+  -webkit-appearance: none; 
+  width: 200px;
+  height: 12px;             /* עובי הפס */
+  background-color: transparent; /* הפס עצמו נמצא ב-track */
+  border-radius: 6px;
+  outline: none;
+  margin: 45px;             /* מרחק מכל צד */
+  padding: 0;               /* אם צריך להוסיף מרחק פנימי */
+}
+
+/* המסלול (Track) */
+.speed::-webkit-slider-runnable-track {
+  height: 12px;             /* עובי הפס */
+  background-color: rgb(246, 242, 130);
+  border-radius: 6px;
+}
+
+/* הכדור (Thumb) */
+.speed::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;              /* יותר גדול מהפס */
+  height: 35px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-top: -12px;       /* ממרכז את הכדור ביחס לפס בגובה */
+  cursor: pointer;
+}
+
+/* Firefox */
+.speed::-moz-range-track {
+  height: 12px;
+  background-color: rgb(234, 230, 121);
+  border-radius: 6px;
+}
+
+.speed::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}

@@ -5,17 +5,17 @@ import "./Grid.css";
 
 export function Grid() {
   const context = useContext(Context);
-  const { numColl, play, numRows } = context!;
+  const { numColl, play, numRows,CurrentCell } = context!;
   const cells = [];
 
-  //יצירת גריד ל ui
+  //Creating a grid for UI
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numColl; col++) {
-      cells.push(<Cell key={`${row}-${col}`} row={row} col={col} />);
+      cells.push(<Cell key={`${row}-${col}`} row={row} col={col} CurrentCell={CurrentCell === col}/>);
     }
   }
 
-  //יצירת המטריצה
+  //Creating the matrix
   for (let col = 0; col < numColl; col++) {
     const tempArr = [];
     for (let row = 0; row < numRows; row++) {
@@ -25,7 +25,7 @@ export function Grid() {
   }
 
   return (
-    <div>
+    <div className="gridWrapper">
       <div
         className="gridContainer"
         style={{ gridTemplateColumns: `repeat(${numColl},60px)` }}

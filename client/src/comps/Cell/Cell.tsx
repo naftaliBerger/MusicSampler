@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import "./Cell.css";
 import { Context } from "../../Context/Provider";
 
-export function Cell({ row ,col}:{ row: number; col: number }) {
+export function Cell({ row ,col,CurrentCell }:{ row: number; col: number;CurrentCell:boolean  }) {
   const [active, setActive] = useState(false);
   const context = useContext(Context);
   const { play} = context!;
@@ -34,7 +34,7 @@ export function Cell({ row ,col}:{ row: number; col: number }) {
 }
   return (
     <div
-      className={`gridBase ${BoxColor()}`}
+      className={`gridBase ${BoxColor()} ${CurrentCell ? "playingCol" : ""}`}
       onClick={handleClick}
     />
   );

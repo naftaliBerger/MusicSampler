@@ -1,9 +1,22 @@
+.gridWrapper {
+  width: 100%;       
+  overflow-x: auto;  
+}
+
 .gridContainer {
   display: grid;
   gap: 5px;
-  justify-content: center;
-  border-radius: 5px;
+  justify-content: start; 
+  background: rgba(255, 255, 255, 0.048);
+  padding: 20px;
+  border-radius: 10px;
 }
+
+.gridContainer > * {
+  width: 60px;
+  height: 60px; 
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
