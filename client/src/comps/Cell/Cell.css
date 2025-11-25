@@ -5,11 +5,11 @@
   border-radius: 5px;
 }
 .gridInactive {
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.627);
 }
 
 .gridRow0 {
-  background-color: orange;
+  background-color: rgb(236, 52, 52);
 }
 .gridRow1 {
   background-color: rgb(38, 255, 0);
@@ -28,5 +28,8 @@
 }
 .gridRow6 {
   background-color: rgb(71, 48, 62);
+}
+.playingCol {
+  opacity: 0.5;
 }
 
