@@ -11,10 +11,10 @@ button {
   border-radius: 20px;
   padding: 20px;
   background-color: rgb(242 219 103);
-  margin-top: 80px
+  margin-top: 80px;
 }
 
-.baseButton{
+.baseButton {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,30 +24,32 @@ button {
 .play {
   background-image: url("/play.png");
 }
-.addColl{
+.addColl {
   background-image: url("/plus.png");
 }
-.DeleteColl{
+.DeleteColl {
   background-image: url("/minus.png");
 }
-.Refresh{
+.Refresh {
   background-image: url("/Refresh.png");
 }
-
+.loop {
+  background-image: url("/loop.png");
+}
 .speed {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   width: 200px;
-  height: 12px;             /* עובי הפס */
+  height: 12px; /* עובי הפס */
   background-color: transparent; /* הפס עצמו נמצא ב-track */
   border-radius: 6px;
   outline: none;
-  margin: 45px;             /* מרחק מכל צד */
-  padding: 0;               /* אם צריך להוסיף מרחק פנימי */
+  margin: 45px; /* מרחק מכל צד */
+  padding: 0; /* אם צריך להוסיף מרחק פנימי */
 }
 
 /* המסלול (Track) */
 .speed::-webkit-slider-runnable-track {
-  height: 12px;             /* עובי הפס */
+  height: 12px; /* עובי הפס */
   background-color: rgb(246, 242, 130);
   border-radius: 6px;
 }
@@ -55,11 +57,11 @@ button {
 /* הכדור (Thumb) */
 .speed::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 35px;              /* יותר גדול מהפס */
+  width: 35px; /* יותר גדול מהפס */
   height: 35px;
   background-color: orange;
   border-radius: 50%;
-  margin-top: -12px;       /* ממרכז את הכדור ביחס לפס בגובה */
+  margin-top: -12px; /* ממרכז את הכדור ביחס לפס בגובה */
   cursor: pointer;
 }
 
@@ -77,3 +79,35 @@ button {
   border-radius: 50%;
   cursor: pointer;
 }
+.volume {
+  margin: 40px;
+  -webkit-appearance: none; /* מבטל את המראה הדיפולטי */
+  width: 100px; /* אורך הסליידר לפני סיבוב */
+  height: 12px; /* עובי הרצועה */
+  background: rgb(234, 230, 121); /* צבע הרצועה */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  transform: rotate(-90deg); /* הופך אותו לאנכי */
+  transform-origin: center; /* כדי שהסיבוב יהיה סביב המרכז */
+}
+
+/* הכפתור לגרירה */
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* .volume::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+} */
