@@ -12,7 +12,7 @@ export function Cell({ row ,col,CurrentCell }:{ row: number; col: number;Current
     play.current[col][row] = !play.current[col][row] 
 
     if (!active) {
-      const audio = new Audio(`http://localhost:3005/A${row}.wav`);
+      const audio = new Audio(`http://localhost:3005/A${row}.mp3`);
       audio.play();
     }
     setActive((prev) => !prev);
