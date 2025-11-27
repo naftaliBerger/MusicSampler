@@ -2,17 +2,17 @@ import { useContext, useState } from "react";
 import "./Cell.css";
 import { Context } from "../../Context/Provider";
 
-export function Cell({ row ,col,CurrentCell }:{ row: number; col: number;CurrentCell:boolean  }) {
+export function Cell({ row ,col,CurrentCell }:{ row: number; col: number;CurrentCell:boolean }) {
   const [active, setActive] = useState(false);
   const context = useContext(Context);
-  const { play} = context!;
+  const { play,toolsArry,ToolSInsex,setToolSInsex,toolsRef } = context!;
 
   const handleClick = () => {
     
     play.current[col][row] = !play.current[col][row] 
 
     if (!active) {
-      const audio = new Audio(`http://localhost:3005/A${row}.mp3`);
+      const audio = new Audio(`http://localhost:3005/${toolsArry[toolsRef.current]}/A${row}.mp3`);
       audio.play();
     }
     setActive((prev) => !prev);

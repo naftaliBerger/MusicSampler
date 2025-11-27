@@ -8,10 +8,10 @@ button {
 .Buttons {
   display: flex;
   justify-content: space-evenly;
-  border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(242 219 103);
   margin-top: 80px;
+  margin-top: 50px;
 }
 
 .baseButton {

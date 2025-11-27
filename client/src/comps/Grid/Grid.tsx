@@ -10,6 +10,7 @@ export function Grid() {
 
   //Creating a grid for UI
   for (let row = 0; row < numRows; row++) {
+    
     for (let col = 0; col < numColl; col++) {
       cells.push(<Cell key={`${row}-${col}`} row={row} col={col} CurrentCell={CurrentCell === col}/>);
     }
