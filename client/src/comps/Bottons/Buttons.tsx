@@ -3,15 +3,15 @@ import { Context } from "../../Context/Provider.tsx";
 import "./Buttons.css";
 export default function Bottons() {
   const context = useContext(Context);
-  const { numColl, setNumColl, play, numRows, setCurrentCell } = context!;
+  const { numColl, setNumColl, play, numRows, setCurrentCell,toolsArry,ToolSInsex,setToolSInsex,toolsRef } = context!;
   const [speed, setSpeed] = useState(500);
-  const [_, setLoop] = useState(false);
+  // const [_, setLoop] = useState(false);
+  const [volume, setVolume] = useState(0.5);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playingRef = useRef(false);
   const lastColRef = useRef(0);
   const speedRef = useRef<number>(500);
   const loopRef = useRef<boolean>(false);
-  const [volume, setVolume] = useState(0.5);
   const volumeRef = useRef<number>(0.5);
 
   //deleteCollButton
@@ -37,7 +37,7 @@ export default function Bottons() {
           lastColRef.current = col;
           for (let row = 0; row < numRows; row++) {
             if (play.current[col][row]) {
-              audioRef.current = new Audio(`http://localhost:3005/A${row}.mp3`);
+              audioRef.current = new Audio(`http://localhost:3005/${toolsArry[toolsRef.current]}/A${row}.mp3`);
               audioRef.current.volume = volumeRef.current;
               audioRef.current.play();
             }
@@ -47,6 +47,7 @@ export default function Bottons() {
       }
       if (lastColRef.current == numColl - 1) {
         lastColRef.current = 0;
+        setCurrentCell(-1)
       }
     } while (loopRef.current);
     playingRef.current = false;
@@ -55,18 +56,28 @@ export default function Bottons() {
   //RefreshButton
   function Refresh() {
     lastColRef.current = 0;
+    setCurrentCell(-1)
   }
 
   //loopButton
   function toggleLoop() {
     loopRef.current = !loopRef.current;
-    setLoop(loopRef.current);
-    console.log(loopRef.current);
+    // setLoop(loopRef.current);
+  }
+  function ToolSelection(){
+    if(ToolSInsex == toolsArry.length - 1){
+      toolsRef.current = 0;
+      setToolSInsex(0)
+    }else{
+      setToolSInsex(ToolSInsex + 1)
+      toolsRef.current += 1;
+    }
   }
   return (
     <div className="Buttons">
       <button className="baseButton play" onClick={handlePlay}></button>
       <button className="baseButton addColl" onClick={handleAdd}></button>
+      <button onClick={ToolSelection}>בחירת כלי</button>
       <input
         className="speed"
         type="range"

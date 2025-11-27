@@ -9,25 +9,25 @@
 }
 
 .gridRow0 {
-  background-color: rgb(236, 52, 52);
+  background-color: #FFD6E8;
 }
 .gridRow1 {
-  background-color: rgb(38, 255, 0);
+  background-color: #FFECC2;
 }
 .gridRow2 {
-  background-color: rgb(0, 102, 255);
+  background-color: #FFFAC2;
 }
 .gridRow3 {
-  background-color: rgb(255, 0, 247);
+  background-color: #DFFFD6;
 }
 .gridRow4 {
-  background-color: rgb(0, 255, 255);
+  background-color: #D6F3FF;
 }
 .gridRow5 {
-  background-color: rgb(246, 112, 150);
+  background-color: #E0D6FF;
 }
 .gridRow6 {
-  background-color: rgb(71, 48, 62);
+  background-color: #FFD6C7;
 }
 .playingCol {
   opacity: 0.5;
