@@ -5,7 +5,7 @@ import { Context } from "../../Context/Provider";
 export function Cell({ row ,col,CurrentCell }:{ row: number; col: number;CurrentCell:boolean }) {
   const [active, setActive] = useState(false);
   const context = useContext(Context);
-  const { play,toolsArry,ToolSInsex,setToolSInsex,toolsRef } = context!;
+  const { play,toolsArry,toolsRef } = context!;
 
   const handleClick = () => {
     

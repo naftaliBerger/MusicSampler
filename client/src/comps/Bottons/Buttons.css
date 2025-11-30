@@ -36,8 +36,19 @@ button {
 .loop {
   background-image: url("/loop.png");
 }
+.piano{
+  background-image: url("/piano.png");
+}
+.guitar{
+  background-image: url("/guitar.png");
+}
+.xylophone{
+  background-image: url("/xylophone.png");
+}
 .speed {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 200px;
   height: 12px; /* עובי הפס */
   background-color: transparent; /* הפס עצמו נמצא ב-track */
@@ -82,6 +93,8 @@ button {
 .volume {
   margin: 40px;
   -webkit-appearance: none; /* מבטל את המראה הדיפולטי */
+  -moz-appearance: none;
+  appearance: none;
   width: 100px; /* אורך הסליידר לפני סיבוב */
   height: 12px; /* עובי הרצועה */
   background: rgb(234, 230, 121); /* צבע הרצועה */
