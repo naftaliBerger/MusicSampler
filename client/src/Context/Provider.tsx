@@ -15,7 +15,7 @@ interface IProps {
 export const Context = createContext<IProps | undefined>(undefined);
 
 export function Provider({ children }: { children: ReactNode }) {
-  const toolsArry = ["piano", "accordion"];
+  const toolsArry = ["piano", "guitar","xylophone"];
   const [numColl, setNumColl] = useState(23);
   const [CurrentCell,setCurrentCell] = useState(-1);
   const [ToolSInsex,setToolSInsex] = useState(0); 

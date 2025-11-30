@@ -6,7 +6,9 @@ export default function Bottons() {
   const { numColl, setNumColl, play, numRows, setCurrentCell,toolsArry,ToolSInsex,setToolSInsex,toolsRef } = context!;
   const [speed, setSpeed] = useState(500);
   // const [_, setLoop] = useState(false);
+  // const [active,setActive] = useState()
   const [volume, setVolume] = useState(0.5);
+  const [img,setImg] = useState("piano");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playingRef = useRef(false);
   const lastColRef = useRef(0);
@@ -68,16 +70,18 @@ export default function Bottons() {
     if(ToolSInsex == toolsArry.length - 1){
       toolsRef.current = 0;
       setToolSInsex(0)
+      setImg(toolsArry[toolsRef.current])
     }else{
       setToolSInsex(ToolSInsex + 1)
       toolsRef.current += 1;
+      setImg(toolsArry[toolsRef.current])
     }
   }
   return (
     <div className="Buttons">
       <button className="baseButton play" onClick={handlePlay}></button>
+      <button className={`baseButton ${img}`} onClick={ToolSelection}></button>
       <button className="baseButton addColl" onClick={handleAdd}></button>
-      <button onClick={ToolSelection}>בחירת כלי</button>
       <input
         className="speed"
         type="range"
