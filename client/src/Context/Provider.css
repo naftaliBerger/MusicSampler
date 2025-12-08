@@ -1,0 +1,48 @@
+.loaderWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.35); 
+  backdrop-filter: blur(2px);      
+
+  pointer-events: none;
+}
+
+.loader {
+  position: relative;
+  width: 150px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(#FFF 90px, transparent 0),
+    linear-gradient(#FFF 90px, transparent 0),
+    linear-gradient(#FFF 90px, transparent 0),
+    linear-gradient(#FFF 90px, transparent 0),
+    linear-gradient(#FFF 90px, transparent 0),
+    linear-gradient(#FFF 90px, transparent 0);
+  background-position:
+    0px center,
+    25px center,
+    50px center,
+    75px center,
+    100px center,
+    125px center;
+  animation: rikSpikeRoll 0.65s linear infinite alternate;
+}
+
+@keyframes rikSpikeRoll {
+  0% { background-size: 20px 6px; }
+  16% { background-size: 20px 90px, 20px 6px, 20px 6px, 20px 6px, 20px 6px, 20px 6px; }
+  33% { background-size: 20px 60px, 20px 90px, 20px 6px, 20px 6px, 20px 6px, 20px 6px; }
+  50% { background-size: 20px 30px, 20px 60px, 20px 90px, 20px 6px, 20px 6px, 20px 6px; }
+  66% { background-size: 20px 6px, 20px 30px, 20px 60px, 20px 90px, 20px 6px, 20px 6px; }
+  83% { background-size: 20px 6px, 20px 6px, 20px 30px, 20px 60px, 20px 90px, 20px 6px; }
+  100% { background-size: 20px 6px, 20px 6px, 20px 6px, 20px 30px, 20px 60px, 20px 90px; }
+}

@@ -45,42 +45,37 @@ button {
 .xylophone{
   background-image: url("/xylophone.png");
 }
+
+.numSpeed {
+  text-align: center;
+  margin: 33px 0 5px 0;
+}
+
+
 .speed {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   width: 200px;
-  height: 12px; /* עובי הפס */
-  background-color: transparent; /* הפס עצמו נמצא ב-track */
+  height: 12px;
   border-radius: 6px;
+  background: linear-gradient(90deg, rgb(246,242,130), orange);
   outline: none;
-  margin: 45px; /* מרחק מכל צד */
-  padding: 0; /* אם צריך להוסיף מרחק פנימי */
+  margin: 45px;
 }
 
-/* המסלול (Track) */
-.speed::-webkit-slider-runnable-track {
-  height: 12px; /* עובי הפס */
-  background-color: rgb(246, 242, 130);
-  border-radius: 6px;
-}
-
-/* הכדור (Thumb) */
 .speed::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 35px; /* יותר גדול מהפס */
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background-color: orange;
   border-radius: 50%;
-  margin-top: -12px; /* ממרכז את הכדור ביחס לפס בגובה */
   cursor: pointer;
 }
 
-/* Firefox */
 .speed::-moz-range-track {
   height: 12px;
-  background-color: rgb(234, 230, 121);
   border-radius: 6px;
+  background: linear-gradient(90deg, rgb(234,230,121), orange);
 }
 
 .speed::-moz-range-thumb {
@@ -90,24 +85,21 @@ button {
   border-radius: 50%;
   cursor: pointer;
 }
-.volume {
-  margin: 40px;
-  -webkit-appearance: none; /* מבטל את המראה הדיפולטי */
-  -moz-appearance: none;
-  appearance: none;
-  width: 100px; /* אורך הסליידר לפני סיבוב */
-  height: 12px; /* עובי הרצועה */
-  background: rgb(234, 230, 121); /* צבע הרצועה */
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 0px;
-  margin-right: 0px;
 
-  transform: rotate(-90deg); /* הופך אותו לאנכי */
-  transform-origin: center; /* כדי שהסיבוב יהיה סביב המרכז */
+
+.volume {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 12px;
+  background: linear-gradient(to top, rgb(234,230,121), orange); 
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  margin: 40px 0 0 0;
 }
 
-/* הכפתור לגרירה */
 .volume::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -117,10 +109,16 @@ button {
   cursor: pointer;
 }
 
-/* .volume::-moz-range-thumb {
+.volume::-moz-range-track {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to top, rgb(234,230,121), orange);
+}
+
+.volume::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #555;
+  background: orange;
   border-radius: 50%;
   cursor: pointer;
-} */
+}
