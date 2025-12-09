@@ -5,7 +5,7 @@ import { Context } from "../../Context/Provider";
 export function Cell({row,col,CurrentCell,}: {row: number;col: number;CurrentCell: boolean;}) {
   const [active, setActive] = useState(false);
   const context = useContext(Context);
-  const { play, audioRef } = context!;
+  const { play, audioRef,volumeRef } = context!;
 
   const handleClick = () => {
     play.current[col][row] = !play.current[col][row];
@@ -14,6 +14,7 @@ export function Cell({row,col,CurrentCell,}: {row: number;col: number;CurrentCel
       const audio = audioRef.current[row];
       if (audio) {
         audio.currentTime = 0;
+        audio.volume = volumeRef.current;
         audio.play();
       }
     }
