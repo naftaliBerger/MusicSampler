@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import lloger from "./Utils/Logger.ts"
 import router from "./Routers/Route.ts";
 import { config } from "dotenv";
 config();
@@ -8,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/", router);
+app.use(lloger)
 // app.use(express.static("sounds"));
 
 
