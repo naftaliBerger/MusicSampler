@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Context } from "../../../Context/Provider.tsx";
 
 export default function ToolSelectionButton() {
   const context = useContext(Context);
-  const {numColl,play,numRows,setCurrentCell,audioRef,volumeRef,lastColRef,loopRef,playingRef,speedRef} = context!;
-
+  const {numColl,play,numRows,setCurrentCell,audioRef,volumeRef,lastColRef,loopRef,speedRef} = context!;
+  const playingRef = useRef(false);                  
+  
    const handlePlay = async () =>{
     playingRef.current = !playingRef.current;
 

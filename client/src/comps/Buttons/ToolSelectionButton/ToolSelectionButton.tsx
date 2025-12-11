@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../../Context/Provider.tsx";
 
 export default function ToolSelectionButton() {
   const context = useContext(Context);
-  const {toolsArry,ToolSInsex,setToolSInsex,toolsRef,img,setImg} = context!;
-
+  const {toolsArry,ToolSInsex,setToolSInsex,toolsRef} = context!;
+  const [img, setImg] = useState("piano");           
+  
   const ToolSelection = () => {
     if (ToolSInsex === toolsArry.length - 1) {
       toolsRef.current = 0;

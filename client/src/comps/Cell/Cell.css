@@ -4,6 +4,12 @@
   cursor: pointer;
   border-radius: 5px;
 }
+
+.gridBase:hover{
+  background-color: #e5ebed;
+  transform: scale(1.1); 
+}
+
 .gridInactive {
   background-color: rgba(211, 211, 211, 0.627);
 }

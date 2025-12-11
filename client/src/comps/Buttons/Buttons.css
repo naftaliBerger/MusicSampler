@@ -2,7 +2,6 @@ button {
   display: grid;
   cursor: pointer;
   border-radius: 5px;
-  /* border-color: #faebd7 */
   border-color: #ffffff;
 }
 .Buttons {
